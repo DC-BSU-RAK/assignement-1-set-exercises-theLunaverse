@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <title>OMORI</title>
+    <title>OMORI - A Psychological Horror RPG</title>
     <!--link to external css file-->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!--navigation bar with anchor links to jump to different sections -->
-    <nav class="navigation">
-        <a href="#overview">Overview</a>
-        <a href="#characters">Characters</a>
-        <a href="#team">Team</a>
-        <a href="#reviews">Reviews</a>
+<!--'nav' handles full-width background/positioning, 'nav-content' div centers and contains the links-->
+<nav class="navigation">
+        <div class="nav-content">
+            <a href="#overview">Overview</a>
+            <a href="#characters">Characters</a>
+            <a href="#team">Team</a>
+            <a href="#reviews">Reviews</a>
+        </div>
     </nav>
 
     <!--main container to center content and control width-->
@@ -19,39 +21,42 @@
         <h1>OMORI</h1>
 
         <!--overview section-->
-        <section id="overview">
+        <section id="overview" class="content-box">
             <h2>Overview</h2>
-            <p>OMORI is a psychological horror RPG game developed by OMOCAT.</p>
+            <p>OMORI is a psychological horror RPG game developed by OMOCAT. The game follows a kid named Sunny and his dream world alter ego OMORI.</p>
             <a href="https://www.omori-game.com" target="_blank" class="button">Official Website</a>
         </section>
 
         <!--characters section as an unordered list-->
-        <section id="characters">
+        <section id="characters" class="content-box">
             <h2>Characters</h2>
             <ul>
-                <li>SUNNY/OMORI - The protagonist</li>
-                <li>AUBREY - A childhood friend</li>
-                <li>KEL - An energetic friend</li>
-                <li>HERO - Kel's brother</li>
-                <li>BASIL - A close friend</li>
-                <li>MARI - Sunny's sister</li>
+                <li><strong>SUNNY/OMORI</strong> - The protagonist</li>
+                <li><strong>AUBREY</strong> - A childhood friend</li>
+                <li><strong>KEL</strong> - An energetic friend</li>
+                <li><strong>HERO</strong> - Kel's brother</li>
+                <li><strong>BASIL</strong> - A close friend</li>
+                <li><strong>MARI</strong> - Sunny's sister</li>
             </ul>
         </section>
 
         <!--creative team section-->
-        <section id="team">
+        <section id="team" class="content-box">
             <h2>Team</h2>
             <ul>
                 <li>Director: OMOCAT</li>
                 <li>Music: Pedro Silva</li>
+                <li>Additional Music: Bo En</li>
+                <li>Development: OMOCAT LLC</li>
             </ul>
         </section>
 
         <!--reviews section-->
-        <section id="reviews">
+        <section id="reviews" class="content-box">
             <h2>Reviews</h2>
             <div class="review-box">
                 <p>"A masterpiece of psychological horror storytelling" - Steam Review</p>
+                <p>"One of the most emotionally impactful games" - PCGamer</p>
             </div>
         </section>
     </div>

@@ -1,15 +1,36 @@
-:root {
-    --main-black: #1a1a1a;
-    --main-white: #f4f4f4;
-    --accent-red: #ff3333;
-    --shadow-color: rgba(0, 0, 0, 0.2);
-}
-
 body {
     margin: 0;
     padding: 0;
-    font-family: 'VT323', monospace;
-    line-height: 1.6;
-    background-color: var(--main-black);
-    color: var(--main-white);
+    font-family: Arial, sans-serif;
+}
+
+.navigation {
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.button {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+}
+
+.review-box {
+    background-color: #f4f4f4;
+    padding: 1rem;
 }

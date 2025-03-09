@@ -1,14 +1,21 @@
-/* styles.css - Stage 2 */
+:root {
+    --main-black: #1a1a1a;
+    --main-white: #f4f4f4;
+    --accent-red: #ff3333;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'VT323', monospace;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: var(--main-black);
+    color: var(--main-white);
 }
 
 .navigation {
-    background-color: #333;
+    background-color: var(--main-black);
+    border-bottom: 2px solid var(--main-white);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -22,14 +29,15 @@ body {
 }
 
 .navigation a {
-    color: white;
+    color: var(--main-white);
     text-decoration: none;
     margin: 0 1rem;
     padding: 0.5rem;
+    font-size: 1.2rem;
 }
 
 .navigation a:hover {
-    background-color: #555;
+    color: var(--accent-red);
 }
 
 .container {
@@ -38,30 +46,53 @@ body {
     padding: 2rem;
 }
 
+.title-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+    letter-spacing: 0.5rem;
+}
+
 .content-box {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--main-white);
     padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.character-item {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--main-white);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
 }
 
 .button {
     display: inline-block;
-    background-color: #333;
-    color: white;
+    background-color: var(--accent-red);
+    color: var(--main-white);
     padding: 0.8rem 1.5rem;
     text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #555;
+    border: 2px solid var(--main-white);
 }
 
 .review-box {
-    background-color: #f8f8f8;
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 1.5rem;
-    border-radius: 4px;
+    border: 1px solid var(--main-white);
 }

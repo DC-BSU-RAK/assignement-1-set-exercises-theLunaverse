@@ -2,6 +2,7 @@
     --main-black: #1a1a1a;
     --main-white: #f4f4f4;
     --accent-red: #ff3333;
+    --shadow-color: rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -34,10 +35,12 @@ body {
     margin: 0 1rem;
     padding: 0.5rem;
     font-size: 1.2rem;
+    transition: all 0.3s ease;
 }
 
 .navigation a:hover {
     color: var(--accent-red);
+    text-shadow: 0 0 8px var(--accent-red);
 }
 
 .container {
@@ -55,6 +58,20 @@ h1 {
     font-size: 4rem;
     margin: 0;
     letter-spacing: 0.5rem;
+    text-shadow: 4px 4px var(--accent-red);
+}
+
+.pixel-decoration {
+    height: 4px;
+    background: repeating-linear-gradient(
+        to right,
+        var(--main-white),
+        var(--main-white) 5px,
+        transparent 5px,
+        transparent 10px
+    );
+    margin: 1rem auto;
+    width: 200px;
 }
 
 .content-box {
@@ -62,6 +79,18 @@ h1 {
     border: 2px solid var(--main-white);
     padding: 2rem;
     margin-bottom: 3rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.content-box:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: var(--accent-red);
+    font-size: 2rem;
+    margin-top: 0;
 }
 
 .character-grid {
@@ -74,12 +103,31 @@ h1 {
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--main-white);
+    transition: all 0.3s ease;
+}
+
+.character-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+}
+
+.character-item strong {
+    color: var(--accent-red);
+    font-size: 1.2rem;
 }
 
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
+}
+
+.team-item {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--main-white);
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
 .button {
@@ -89,10 +137,25 @@ h1 {
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border: 2px solid var(--main-white);
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.button:hover {
+    background-color: var(--main-white);
+    color: var(--main-black);
+    text-shadow: none;
+    box-shadow: 0 0 15px var(--accent-red);
 }
 
 .review-box {
     background-color: rgba(255, 255, 255, 0.05);
     padding: 1.5rem;
     border: 1px solid var(--main-white);
+}
+
+.review-box p {
+    margin: 1rem 0;
+    font-style: italic;
+    font-size: 1.2rem;
 }

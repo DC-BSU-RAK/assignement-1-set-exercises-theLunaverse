@@ -39,6 +39,21 @@ section h2 {
     border-radius: 0 5px 5px 0;
 }
 
+pre {
+    background-color: #f3f0f7;
+    border: 1px solid #d1c4e9;
+    border-radius: 4px;
+    padding: 15px;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #7e57c2;
+    font-size: 0.9em;
+}
+
 h3 {
     color: #5e35b1;
     margin-bottom: 10px;

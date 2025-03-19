@@ -2,39 +2,7 @@
 <html lang="en">
 <head>
     <title>My favourite Breakfast</title>
-    <style>
-        /*basic styling for the body*/
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f5f0;
-        }
-
-        /*styling for each image container*/
-        .image-container {
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        /*styling for images with added CSS filters*/
-        img {
-            filter: brightness(105%) contrast(105%) saturate(110%);
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        /*styling for license information text*/
-        .license-info {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!--container for the first image and its license information -->
@@ -44,10 +12,11 @@
              width="800"
              height="533"
              title="Fried egg with bacon on the side">
-        <p class="license-info">
-            Photo by Wright Brand Bacon,
+        <figcaption class="license-info">
+             Photo by Wright Brand Bacon,
             License: Unsplash License (Free to use for commercial and noncommercial purposes)
-
+        </figcaption>
+    </div>
     <!--container for the second image and its license information-->
     <div class="image-container">
         <img src="https://images.unsplash.com/flagged/photo-1557609786-fd36193db6e5"
@@ -55,10 +24,10 @@
              width="800"
              height="533"
              title="Delicious pancake with berries">
-        <p class="license-info">
+        <figcaption class="license-info">
             Photo by Fa Barboza on Unsplash
             License: Unsplash License (Free to use for commercial and noncommercial purposes)
-        </p>
+        </figcaption>
     </div>
 
     <!--container for the third image and its license information-->
@@ -68,10 +37,10 @@
              width="800"
              height="533"
              title="Delicious avocado toast with veggies">
-        <p class="license-info">
+        <figcaption class="license-info">
             Photo by Jasper Gribble on Unsplash
             License: Unsplash License (Free to use for commercial and noncommercial purposes)
-        </p>
+        </figcaption>
     </div>
 </body>
 </html>

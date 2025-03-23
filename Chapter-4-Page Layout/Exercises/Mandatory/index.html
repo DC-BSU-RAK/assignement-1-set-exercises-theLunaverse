@@ -1,26 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--page title displayed in browser tab-->
     <title>Digi Fest 2022</title>
+    
+    <!--link to external CSS stylesheet-->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--main header section containing logo and navigation -->
     <header>
-        <h1>Digi Fest 2022</h1>
+        <div class="logo">DIGI FEST 2022</div>
+        
+        <!--navigation menu with links to different pages-->
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
+                <li><a href="#">What's On</a></li>
+                <li><a href="#">Contact</a></li>
                 <li><a href="#">Tickets</a></li>
             </ul>
         </nav>
     </header>
 
+    <!--main content area split into two sections-->
     <main>
-        <section>
-            <h2>Welcome</h2>
-            <p>Digi Fest is a celebration of digital technology.</p>
+        <!--welcome section with description and background image-->
+        <section class="welcome">
+            <h1>Welcome</h1>
+            <p>Digi Fest is a celebration of digital and technology in Cardiff.</p>
+            
+            <!--container for background code image-->
+            <div class="code-image">
+                <img src="https://bimmode.com/wp-content/uploads/2018/10/tech_5-1536x819.jpg" alt="Tech Background">
+            </div>
         </section>
+
+        <!--sidebar with event line-up-->
+        <aside class="line-up">
+            <h2>Line Up</h2>
+            <ul>
+                <li>- Introduction to HTML and CSS</li>
+                <li>- Links and Images</li>
+                <li>- Page Layout</li>
+            </ul>
+        </aside>
     </main>
+
+    <!--footer with copyright information-->
+    <footer>
+        <p>© 2022 DigiFest Ltd.</p>
+    </footer>
 </body>
 </html>

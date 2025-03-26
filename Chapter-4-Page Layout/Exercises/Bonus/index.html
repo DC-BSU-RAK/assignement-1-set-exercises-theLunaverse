@@ -8,7 +8,6 @@
     <!--links an external CSS file for styling the webpage-->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <!--a container div to wrap the entire page content-->
     <div class="container">
@@ -17,7 +16,7 @@
             <!--logo section within the sidebar-->
             <div class="logo">
                 <img src="https://i.pinimg.com/736x/50/ff/3d/50ff3d3f0537df7321189be881c5d24d.jpg" alt="Cute Logo">
-                <h1>Web Development module Study planner</h1>
+                <h1>Web Development module study planner</h1>
             </div>
 
             <!--navigation menu using the 'nav' tag-->
@@ -25,16 +24,28 @@
                 <ul>
                     <!--'active' class highlights the current page/section-->
                     <li class="active">
-                        <a href="#dashboard">Dashboard</a>
+                        <a href="#dashboard">
+                            <span class="icon">🏠</span>
+                            Dashboard
+                        </a>
                     </li>
                     <li>
-                        <a href="#modules">Modules</a>
+                        <a href="#modules">
+                            <span class="icon">📚</span>
+                            Modules
+                        </a>
                     </li>
                     <li>
-                        <a href="#progress">Progress</a>
+                        <a href="#progress">
+                            <span class="icon">📊</span>
+                            Progress
+                        </a>
                     </li>
                     <li>
-                        <a href="#resources">Resources</a>
+                        <a href="#resources">
+                            <span class="icon">🔍</span>
+                            Resources
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -43,8 +54,8 @@
         <!--main content area using the 'main' tag-->
         <main class="main-content">
             <header class="page-header">
-                <h2>Your Web Development Study Plan</h2>
-                
+                <h2>Your Web Development Study Plan 🎀</h2>
+
                 <!--user information section-->
                 <div class="user-info">
                     <!--user avatar image, with greeting-->
@@ -54,15 +65,16 @@
             </header>
 
             <section class="module-section">
-                <h3>Current Modules</h3>
-                
+                <h3>Current Modules 🚀</h3>
+
                 <!--grid container for module cards-->
                 <div class="module-grid">
                     <!--individual module card-->
                     <div class="module-card">
-                        <!--module title-->
+                        <!--module title and icon-->
+                        <div class="module-icon">🌐</div>
                         <h4>HTML Fundamentals</h4>
-                        
+
                         <!--progress bar container -->
                         <div class="module-progress">
                             <div class="progress-bar" style="width: 70%;"></div>
@@ -71,9 +83,49 @@
                         <!--continue learning button-->
                         <button>Continue Learning</button>
                     </div>
+
+                    <div class="module-card">
+                        <div class="module-icon">🎨</div>
+                        <h4>CSS Styling</h4>
+                        <div class="module-progress">
+                            <div class="progress-bar" style="width: 50%;"></div>
+                        </div>
+                        <button>Continue Learning</button>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-icon">⚡</div>
+                        <h4>JavaScript</h4>
+                        <div class="module-progress">
+                            <div class="progress-bar" style="width: 30%;"></div>
+                        </div>
+                        <button>Continue Learning</button>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-icon">📱</div>
+                        <h4>User interface</h4>
+                        <div class="module-progress">
+                            <div class="progress-bar" style="width: 60%;"></div>
+                        </div>
+                        <button>Continue Learning</button>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-icon">🛠️</div>
+                        <h4>Web Frameworks</h4>
+                        <div class="module-progress">
+                            <div class="progress-bar" style="width: 20%;"></div>
+                        </div>
+                        <button>Continue Learning</button>
+                    </div>
                 </div>
             </section>
         </main>
     </div>
+
+    <footer>
+        <p>🌟 Creative Computing Web Development Module 🌟</p>
+    </footer>
 </body>
 </html>

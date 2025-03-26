@@ -152,7 +152,13 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* footer */
 .module-card button:hover {
     background-color: darken(var(--accent-pink), 10%);
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-secondary);
 }

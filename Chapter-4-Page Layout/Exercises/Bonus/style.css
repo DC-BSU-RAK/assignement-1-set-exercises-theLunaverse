@@ -1,0 +1,44 @@
+:root {
+    --bg-primary: #FFF0F5;
+    --bg-secondary: #FFFFFF;
+    --text-primary: #333;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: var(--bg-primary);
+}
+

@@ -25,6 +25,8 @@ body {
     display: flex;
     min-height: 100vh;
 }
+
+/* sidebar styling */
 .sidebar {
     width: 250px;
     background-color: var(--bg-secondary);
@@ -72,6 +74,7 @@ body {
     font-size: 1.2em;
 }
 
+/* main content */
 .main-content {
     flex-grow: 1;
     padding: 20px;
@@ -100,6 +103,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* module grid */
 .module-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -148,6 +152,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* footer */
 .module-card button:hover {
     background-color: darken(var(--accent-pink), 10%);
 }

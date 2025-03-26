@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+
 :root {
     --bg-primary: #FFF0F5;
     --bg-secondary: #FFFFFF;
+    --accent-pink: #FF69B4;
+    --accent-lavender: #E6E6FA;
     --text-primary: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -15,12 +25,23 @@ body {
     display: flex;
     min-height: 100vh;
 }
-
 .sidebar {
     width: 250px;
     background-color: var(--bg-secondary);
     padding: 20px;
     box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
 }
 
 .sidebar nav ul {
@@ -31,9 +52,24 @@ body {
     margin-bottom: 15px;
 }
 
-.logo {
-    text-align: center;
-    margin-bottom: 30px;
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li.active a,
+.sidebar nav ul li a:hover {
+    background-color: var(--accent-lavender);
+}
+
+.sidebar .icon {
+    margin-right: 10px;
+    font-size: 1.2em;
 }
 
 .main-content {
@@ -42,3 +78,76 @@ body {
     background-color: var(--bg-primary);
 }
 
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info img {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 45px;
+    height: 45px;
+}
+.module-section h3 {
+    margin-bottom: 20px;
+}
+
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.module-card {
+    background-color: var(--bg-secondary);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.module-card:hover {
+    transform: translateY(-10px);
+}
+
+.module-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.module-progress {
+    height: 10px;
+    background-color: var(--accent-lavender);
+    border-radius: 5px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--accent-pink);
+}
+
+.module-card button {
+    background-color: var(--accent-pink);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.module-card button:hover {
+    background-color: darken(var(--accent-pink), 10%);
+}

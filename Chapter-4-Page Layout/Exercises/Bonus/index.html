@@ -10,22 +10,48 @@
     <div class="container">
         <aside class="sidebar">
             <div class="logo">
-                <h1>Web Development module study planner</h1>
+                <img src="https://i.pinimg.com/736x/50/ff/3d/50ff3d3f0537df7321189be881c5d24d.jpg" alt="Cute Logo">
+                <h1>Web Development module Study planner</h1>
             </div>
             <nav>
                 <ul>
-                    <li>Dashboard</li>
-                    <li>Modules</li>
-                    <li>Progress</li>
-                    <li>Resources</li>
+                    <li class="active">
+                        <a href="#dashboard">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#modules">Modules</a>
+                    </li>
+                    <li>
+                        <a href="#progress">Progress</a>
+                    </li>
+                    <li>
+                        <a href="#resources">Resources</a>
+                    </li>
                 </ul>
             </nav>
         </aside>
 
         <main class="main-content">
-            <header>
+            <header class="page-header">
                 <h2>Your Web Development Study Plan</h2>
+                <div class="user-info">
+                    <img src="https://i.pinimg.com/474x/4c/3e/3b/4c3e3b91f05a5765aa544ac7557d6642.jpg" alt="User Avatar">
+                    <span>Hello, Student!</span>
+                </div>
             </header>
+
+            <section class="module-section">
+                <h3>Current Modules</h3>
+                <div class="module-grid">
+                    <div class="module-card">
+                        <h4>HTML Fundamentals</h4>
+                        <div class="module-progress">
+                            <div class="progress-bar" style="width: 70%;"></div>
+                        </div>
+                        <button>Continue Learning</button>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
 </body>

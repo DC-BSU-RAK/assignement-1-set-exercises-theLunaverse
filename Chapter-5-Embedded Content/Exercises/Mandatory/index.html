@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cute Cat Playing</title>
+    <style>
+        html, body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video {
+            max-width: 80%;
+            max-height: 80%;
+        }
+    </style>
 </head>
 <body>
+    <!--video element with controls, looping enabled and a poster image-->
     <video controls loop poster="Video/image.png">
+        <!--video source-->
         <source src="Video/video.mp4" type="video/mp4">
     </video>
 </body>

@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petrol calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <div>
+    <div class="calculator-container">
+        <div class="calculator-header">
             <h1>Petrol Calculator</h1>
         </div>
-        <div>
-            <div>
-                <label>Price per Liter</label>
-                <div>
+        <div class="calculator-content">
+            <div class="input-group">
+                <label for="pricePerLiter">Price per Liter</label>
+                <div class="pixel-input-container">
                     <input type="number" 
                            id="pricePerLiter" 
                            placeholder="1.72" 
@@ -22,9 +23,9 @@
                            min="0">
                 </div>
             </div>
-            <div>
+            <div class="input-group">
                 <label for="liters">Number of Liters</label>
-                <div>
+                <div class="pixel-input-container">
                     <input type="number" 
                            id="liters" 
                            placeholder="0" 
@@ -32,9 +33,8 @@
                            min="0">
                 </div>
             </div>
-            <button>Calculate</button>
-            <div>
-                <p>Total Cost: €0.00</p>
+            <div class="result-container">
+                <p id="result">Total Cost: €0.00</p>
             </div>
         </div>
     </div>

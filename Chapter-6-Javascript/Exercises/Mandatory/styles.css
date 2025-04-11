@@ -138,3 +138,9 @@ button:disabled {
     text-align: center;
     margin-top: 1.5rem;
 }
+
+#result {
+    font-size: 0.8rem;
+    color: #b38c9c;
+    text-shadow: 1px 1px #ffe6ee;
+}

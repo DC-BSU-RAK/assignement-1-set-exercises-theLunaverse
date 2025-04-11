@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ffd6e0;
+    background-image: 
+        linear-gradient(transparent 0%, transparent 95%, #ffbfcc 95%),
+        linear-gradient(90deg, transparent 0%, transparent 95%, #ffbfcc 95%);
+    background-size: 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator-container {
+    background-color: #fff6f8;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    border: 6px solid #b38c9c;
+    position: relative;
+}
+
+.calculator-container::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 6px solid #cea2b4;
+    pointer-events: none;
+}
+
+h1 {
+    font-size: 1.2rem;
+    color: #b38c9c;
+    text-shadow: 2px 2px #ffe6ee;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: #b38c9c;
+    font-size: 0.8rem;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: #ff9dbc;
+}
+
+button:disabled {
+    background: #d4d4d4;
+    cursor: not-allowed;
+    border-color: #b5b5b5;
+}
+
+.result-container {
+    background: #ffeef3;
+    padding: 1rem;
+    border: 4px solid #b38c9c;
+    text-align: center;
+    margin-top: 1.5rem;
+}

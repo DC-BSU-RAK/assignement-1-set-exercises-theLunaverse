@@ -42,3 +42,17 @@ function calculateTotal() {
     //display result
     document.getElementById('result').textContent = `Total Cost: €${totalCost}`;
 }
+
+//check for changes in price input
+document.getElementById('pricePerLiter').addEventListener('input', function() {
+    //prevent negative values
+    if (this.value < 0) this.value = 0;
+    //validate new price
+    validatePrice(parseFloat(this.value));
+});
+
+//check for changes in liters input
+document.getElementById('liters').addEventListener('input', function() {
+    //prevent negative values
+    if (this.value < 0) this.value = 0;
+});

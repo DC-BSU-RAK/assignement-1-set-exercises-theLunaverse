@@ -24,6 +24,7 @@ body {
     width: 95%;
 }
 
+/* header */
 .game-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -62,4 +63,50 @@ h1 {
     gap: 0.5rem;
     color: #00ff00;
     text-shadow: 0 0 5px #00ff00;
+}
+
+/* challenge section */
+.challenge {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #111;
+    border: 2px solid #00ff00;
+}
+
+.level {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #ff0000;
+}
+
+.target {
+    font-size: 1rem;
+}
+
+.rgb-code {
+    margin-top: 0.5rem;
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+}
+
+/* color grid */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.color-box {
+    aspect-ratio: 1;
+    border: 3px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.color-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
 }

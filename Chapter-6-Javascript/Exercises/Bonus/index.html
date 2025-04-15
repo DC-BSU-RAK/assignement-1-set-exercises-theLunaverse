@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Guessing Game</title>
+</head>
+<body>
+    <div>
+        <!--game header section-->
+        <div>
+            <h1>RGB Guessing Game</h1>
+            <div>
+                <div>
+                    <span>LIVES:</span>
+                    <div id="hearts">❤️❤️❤️</div>
+                </div>
+                <div>
+                    SCORE: <span id="score">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!--challenge display section-->
+        <div>
+            <div>LEVEL <span id="level">1</span></div>
+            <div>
+                <span>TARGET RGB:</span>
+                <div id="rgb-value">RGB(255, 255, 255)</div>
+            </div>
+        </div>
+
+        <!--color choice boxes-->
+        <div>
+            <div data-index="0"></div>
+            <div data-index="1"></div>
+            <div data-index="2"></div>
+        </div>
+
+        <!--game message display-->
+        <div id="message"></div>
+        
+        <!--play again button-->
+        <button id="play-again" hidden>INSERT COIN TO PLAY AGAIN</button>
+    </div>
+</body>
+</html>

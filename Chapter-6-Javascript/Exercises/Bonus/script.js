@@ -27,6 +27,11 @@ const basicColors = [
     { r: 255, g: 255, b: 255 } // White (All colors)
 ];
 
+//generateColor(level): creates the correct color based on current level
+// - Levels 1-8: uses basic colors from basicColors array
+// - Levels 9-12: uses medium difficulty colors (0, 128, 255 values only)
+// - Levels 13+: uses completely random RGB values
+
 function generateColor(level) {
     if (level <= 8) {
         //use basic colors for first 8 levels

@@ -11,12 +11,12 @@
         <!--game header section-->
         <div class="game-header">
             <h1>RGB Guessing Game</h1>
-            <div>
-                <div>
+            <div class="stats">
+                <div class="lives">
                     <span>LIVES:</span>
-                    <div id="hearts">❤️❤️❤️</div>
+                    <div id="hearts" class="hearts">❤️❤️❤️</div>
                 </div>
-                <div>
+                <div class="score">
                     SCORE: <span id="score">0</span>
                 </div>
             </div>
@@ -27,7 +27,7 @@
             <div>LEVEL <span id="level">1</span></div>
             <div>
                 <span>TARGET RGB:</span>
-                <div id="rgb-value">RGB(255, 255, 255)</div>
+                <div id="rgb-value" class="rgb-code">RGB(255, 255, 255)</div>
             </div>
         </div>
 
@@ -42,7 +42,7 @@
         <div id="message"></div>
         
         <!--play again button-->
-        <button id="play-again" hidden>INSERT COIN TO PLAY AGAIN</button>
+        <button id="play-again" class="arcade-btn" hidden>INSERT COIN TO PLAY AGAIN</button>
     </div>
 </body>
 </html>

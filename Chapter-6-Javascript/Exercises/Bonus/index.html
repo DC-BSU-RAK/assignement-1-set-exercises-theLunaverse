@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RGB Guessing Game</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="game-container">
-        <!--game header section-->
+        <!--game header-->
         <div class="game-header">
             <h1>RGB Guessing Game</h1>
             <div class="stats">
                 <div class="lives">
                     <span>LIVES:</span>
-                    <div id="hearts" class="hearts">❤️❤️❤️</div>
+                    <div class="hearts" id="hearts">
+                        ❤️❤️❤️
+                    </div>
                 </div>
                 <div class="score">
                     SCORE: <span id="score">0</span>
@@ -22,27 +25,28 @@
             </div>
         </div>
 
-        <!--challenge display section-->
-        <div>
-            <div>LEVEL <span id="level">1</span></div>
-            <div>
+        <!--challenge display-->
+        <div class="challenge">
+            <div class="level">LEVEL <span id="level">1</span></div>
+            <div class="target">
                 <span>TARGET RGB:</span>
                 <div id="rgb-value" class="rgb-code">RGB(255, 255, 255)</div>
             </div>
         </div>
 
         <!--color choice boxes-->
-        <div>
-            <div data-index="0"></div>
-            <div data-index="1"></div>
-            <div data-index="2"></div>
+        <div class="color-grid">
+            <div class="color-box" data-index="0"></div>
+            <div class="color-box" data-index="1"></div>
+            <div class="color-box" data-index="2"></div>
         </div>
 
         <!--game message display-->
-        <div id="message"></div>
+        <div id="message" class="message"></div>
         
         <!--play again button-->
-        <button id="play-again" class="arcade-btn" hidden>INSERT COIN TO PLAY AGAIN</button>
+        <button id="play-again" class="arcade-btn" style="display: none;">INSERT COIN TO PLAY AGAIN</button>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

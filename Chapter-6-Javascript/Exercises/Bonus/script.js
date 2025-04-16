@@ -192,3 +192,20 @@ function endGame() {
     playAgainBtn.style.display = 'block';
     colorBoxes.forEach(box => box.style.pointerEvents = 'none');
 }
+
+// resetGame(): resets game to initial state
+// - resets lives, score, level
+// - starts new round
+
+function resetGame() {
+    lives = 3;
+    score = 0;
+    level = 1;
+    heartsDisplay.textContent = '❤️❤️❤️';
+    scoreDisplay.textContent = score;
+    levelDisplay.textContent = level;
+    message.textContent = '';
+    playAgainBtn.style.display = 'none';
+    colorBoxes.forEach(box => box.style.display = 'block');
+    newRound();
+}

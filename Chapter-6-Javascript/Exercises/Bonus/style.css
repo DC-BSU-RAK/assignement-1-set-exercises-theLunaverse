@@ -110,3 +110,29 @@ h1 {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(255,255,255,0.5);
 }
+
+/* message styles */
+.message {
+    text-align: center;
+    height: 2rem;
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+/* button styles */
+.arcade-btn {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.arcade-btn:hover {
+    background-color: #ff3333;
+    box-shadow: 0 0 20px #ff0000;
+}

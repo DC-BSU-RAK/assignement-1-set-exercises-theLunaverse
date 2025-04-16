@@ -151,3 +151,27 @@ function newRound() {
 function restrict(value) {
     return Math.min(255, Math.max(0, Math.floor(value)));
 }
+
+function handleGuess(selectedColor) {
+    if (selectedColor === correctColor) {
+        // calculate score based on level
+        let levelBonus = Math.floor(level * 50);
+        score += levelBonus;
+        level++;
+        message.textContent = `CORRECT! +${levelBonus} POINTS`;
+        message.className = 'message correct';
+        scoreDisplay.textContent = score;
+        setTimeout(newRound, 1200);
+    } else {
+        lives--;
+        heartsDisplay.textContent = '❤️'.repeat(lives);
+        message.textContent = 'WRONG! TRY AGAIN!';
+        message.className = 'message incorrect';
+        
+        if (lives === 0) {
+            endGame();
+        } else {
+            setTimeout(newRound, 1200);
+        }
+    }
+}

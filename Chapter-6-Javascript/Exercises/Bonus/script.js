@@ -105,3 +105,44 @@ function generateWrongOptions(correct, level) {
 function colorToRGB(color) {
     return `rgb(${Math.round(color.r)}, ${Math.round(color.g)}, ${Math.round(color.b)})`;
 }
+
+// newRound(): sets up each new round
+// - generates new correct color
+// - creates wrong options
+// - updates display
+// - sets difficulty
+
+function newRound() {
+    // generate correct color
+    const baseColor = generateColor(level);
+    correctColor = colorToRGB(baseColor);
+    
+    // display RGB value
+    rgbDisplay.textContent = correctColor;
+
+    // generate wrong options
+    let wrongOptions = generateWrongOptions(baseColor, level);
+    
+    // combine and shuffle all options
+    colorOptions = [correctColor, ...wrongOptions.map(colorToRGB)]
+        .sort(() => Math.random() - 0.5);
+
+    // update boxes (always show 3 options)
+    colorBoxes.forEach((box, index) => {
+        if (index < 3) {
+            box.style.backgroundColor = colorOptions[index];
+            box.style.display = 'block';
+            box.style.pointerEvents = 'auto';
+        } else {
+            box.style.display = 'none';
+        }
+    });
+
+    // update difficulty 
+    let difficulty = 'BASIC RGB';
+    if (level <= 8) difficulty = 'BASIC RGB';
+    else if (level <= 12) difficulty = 'INTERMEDIATE';
+    else difficulty = 'ADVANCED';
+    
+    levelDisplay.textContent = `${level} (${difficulty})`;
+}

@@ -152,6 +152,12 @@ function restrict(value) {
     return Math.min(255, Math.max(0, Math.floor(value)));
 }
 
+// handleGuess(selectedColor): handles player's color selection
+// - checks if correct
+// - updates score/lives
+// - shows messages
+// - triggers next round or game over
+
 function handleGuess(selectedColor) {
     if (selectedColor === correctColor) {
         // calculate score based on level
@@ -175,6 +181,11 @@ function handleGuess(selectedColor) {
         }
     }
 }
+
+//endGame(): ends the game 
+// - shows final score
+// - displays play again button
+// - disables color boxes
 
 function endGame() {
     message.textContent = `GAME OVER! FINAL SCORE: ${score}`;

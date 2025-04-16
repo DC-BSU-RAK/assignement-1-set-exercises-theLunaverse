@@ -98,3 +98,10 @@ function generateWrongOptions(correct, level) {
         });
     }
 }
+
+// colorToRGB(color): converts color object to RGB string format
+// example: {r: 255, g: 0, b: 0} → "rgb(255, 0, 0)"
+
+function colorToRGB(color) {
+    return `rgb(${Math.round(color.r)}, ${Math.round(color.g)}, ${Math.round(color.b)})`;
+}

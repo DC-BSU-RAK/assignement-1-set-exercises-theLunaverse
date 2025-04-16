@@ -53,3 +53,48 @@ function generateColor(level) {
         };
     }
 }
+
+// generateWrongOptions(correct, level): creates incorrect color options
+// - Levels 1-8: uses other basic colors
+// - Levels 9-12: uses medium values
+// - Levels 13+: generates similar but different colors
+
+function generateWrongOptions(correct, level) {
+    if (level <= 8) {
+        //for basic levels, use other basic colors
+        return basicColors
+            .filter(color => 
+                color.r !== correct.r || 
+                color.g !== correct.g || 
+                color.b !== correct.b)
+            .sort(() => Math.random() - 0.5)
+            .slice(0, 2);
+    } else if (level <= 12) {
+        //for medium levels, use medium values
+        const options = [];
+        const values = [0, 128, 255];
+        while (options.length < 2) {
+            let newColor = {
+                r: values[Math.floor(Math.random() * 3)],
+                g: values[Math.floor(Math.random() * 3)],
+                b: values[Math.floor(Math.random() * 3)]
+            };
+            if (newColor.r !== correct.r || 
+                newColor.g !== correct.g || 
+                newColor.b !== correct.b) {
+                options.push(newColor);
+            }
+        }
+        return options;
+    } else {
+        //for advanced levels, generate similar colors
+        return Array(2).fill(null).map(() => {
+            const variance = Math.max(20, 100 - (level * 2));
+            return {
+                r: clamp(correct.r + (Math.random() - 0.5) * variance * 2),
+                g: clamp(correct.g + (Math.random() - 0.5) * variance * 2),
+                b: clamp(correct.b + (Math.random() - 0.5) * variance * 2)
+            };
+        });
+    }
+}

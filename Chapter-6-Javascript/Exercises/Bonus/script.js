@@ -91,9 +91,9 @@ function generateWrongOptions(correct, level) {
         return Array(2).fill(null).map(() => {
             const variance = Math.max(20, 100 - (level * 2));
             return {
-                r: clamp(correct.r + (Math.random() - 0.5) * variance * 2),
-                g: clamp(correct.g + (Math.random() - 0.5) * variance * 2),
-                b: clamp(correct.b + (Math.random() - 0.5) * variance * 2)
+                r: restrict(correct.r + (Math.random() - 0.5) * variance * 2),
+                g: restrict(correct.g + (Math.random() - 0.5) * variance * 2),
+                b: restrict(correct.b + (Math.random() - 0.5) * variance * 2)
             };
         });
     }
@@ -145,4 +145,9 @@ function newRound() {
     else difficulty = 'ADVANCED';
     
     levelDisplay.textContent = `${level} (${difficulty})`;
+}
+
+// restrict value between 0 and 255
+function restrict(value) {
+    return Math.min(255, Math.max(0, Math.floor(value)));
 }

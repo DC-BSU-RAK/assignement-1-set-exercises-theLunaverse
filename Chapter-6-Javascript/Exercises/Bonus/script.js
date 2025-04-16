@@ -175,3 +175,9 @@ function handleGuess(selectedColor) {
         }
     }
 }
+
+function endGame() {
+    message.textContent = `GAME OVER! FINAL SCORE: ${score}`;
+    playAgainBtn.style.display = 'block';
+    colorBoxes.forEach(box => box.style.pointerEvents = 'none');
+}

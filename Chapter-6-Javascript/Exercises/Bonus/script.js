@@ -209,3 +209,15 @@ function resetGame() {
     colorBoxes.forEach(box => box.style.display = 'block');
     newRound();
 }
+
+//adds click handlers to color boxes
+colorBoxes.forEach(box => {
+    box.addEventListener('click', () => {
+        handleGuess(box.style.backgroundColor);
+    });
+});
+
+playAgainBtn.addEventListener('click', resetGame);
+
+// start game
+resetGame();
